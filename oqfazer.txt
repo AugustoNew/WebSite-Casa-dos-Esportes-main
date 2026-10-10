@@ -1,0 +1,3 @@
+sistema de compras online
+ajustar layout
+organizar informacoes da loja na pagina inicial

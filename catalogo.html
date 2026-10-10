@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Catálogo Casa dos Esportes" />
+    <title>Catálogo | Casa dos Esportes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/catalogo.css" />
+  </head>
+  <body>
+    <div class="announcement">
+      <span>CASA DOS ESPORTES</span> • encontre seu próximo movimento
+    </div>
+    <header class="site-header">
+      <div class="header-main container">
+        <a class="brand" href="index.html"
+          ><span class="brand-mark"><i data-lucide="zap"></i></span
+          ><span>CASA DOS<br /><b>ESPORTES</b></span></a
+        ><a class="back-link" href="index.html"
+          ><i data-lucide="arrow-left"></i> Voltar para início</a
+        >
+        <nav class="catalog-actions">
+          <a href="conta.html"><i data-lucide="user-round"></i> Minha conta</a
+          ><button class="icon-btn" id="catalogCart" aria-label="Carrinho">
+            <i data-lucide="shopping-bag"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="catalog-hero">
+        <div class="container">
+          <p class="eyebrow">A CASA DO SEU JOGO</p>
+          <h1>Catálogo de<br /><span>produtos.</span></h1>
+          <p>O espaço onde a curadoria da Casa dos Esportes vai ganhar vida.</p>
+        </div>
+      </section>
+      <section class="catalog-layout container">
+        <aside class="filters">
+          <div class="filter-heading">
+            <h2>Filtrar por</h2>
+            <button id="clearFilters">Limpar filtros</button>
+          </div>
+          <label class="filter-search"
+            ><i data-lucide="search"></i
+            ><input
+              id="catalogSearch"
+              type="search"
+              placeholder="Buscar produto" /></label
+          ><label
+            >Marca<select id="brandFilter">
+              <option value="">Todas as marcas</option>
+            </select></label
+          ><label
+            >Categoria<select id="categoryFilter">
+              <option value="">Todas as categorias</option>
+            </select></label
+          ><label
+            >Estilo<select id="styleFilter">
+              <option value="">Todos os estilos</option>
+            </select></label
+          >
+          <div class="price-filter">
+            <span>Faixa de preço</span>
+            <div>
+              <input
+                id="minPrice"
+                type="number"
+                min="0"
+                placeholder="Mínimo"
+              /><input
+                id="maxPrice"
+                type="number"
+                min="0"
+                placeholder="Máximo"
+              />
+            </div>
+          </div>
+          <label class="check-filter"
+            ><input id="catalogPromo" type="checkbox" /> Somente
+            promoções</label
+          ><label class="check-filter"
+            ><input id="catalogStock" type="checkbox" /> Somente
+            disponíveis</label
+          ><label class="check-filter"
+            ><input id="catalogNew" type="checkbox" /> Somente
+            lançamentos</label
+          >
+        </aside>
+        <section class="catalog-results">
+          <div class="results-top">
+            <div>
+              <p class="eyebrow">SELEÇÃO COMPLETA</p>
+              <h2>Todos os produtos <small id="resultCount">0 itens</small></h2>
+            </div>
+            <select id="catalogSort" aria-label="Ordenar produtos">
+              <option value="recent">Mais recentes</option>
+              <option value="low">Menor preço</option>
+              <option value="high">Maior preço</option>
+              <option value="sales">Mais vendidos</option>
+              <option value="discount">Maior desconto</option>
+            </select>
+          </div>
+          <div class="empty-catalog" id="emptyCatalog">
+            <div class="empty-mark"><i data-lucide="package-open"></i></div>
+            <p class="eyebrow">CATÁLOGO EM PREPARAÇÃO</p>
+            <h2>Nenhum produto disponível ainda.</h2>
+            <p>
+              O dono da loja poderá cadastrar produtos, preços, estoque,
+              imagens, marcas e promoções pela área administrativa.
+            </p>
+            <a href="index.html" class="button button-gold"
+              >Voltar para a loja <i data-lucide="arrow-right"></i
+            ></a>
+          </div>
+          <div class="catalog-grid" id="catalogGrid"></div>
+        </section>
+      </section>
+    </main>
+    <footer class="catalog-footer">
+      <div class="container">
+        <span>© 2024 Casa dos Esportes</span
+        ><span>Catálogo preparado para Supabase</span>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="js/catalogo.js"></script>
+  </body>
+</html>

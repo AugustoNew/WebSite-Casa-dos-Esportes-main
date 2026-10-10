@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Casa dos Esportes: equipamento, estilo e performance para todos os seus desafios."
+    />
+    <title>Casa dos Esportes | Tudo para o seu esporte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="announcement">
+      <span>FRETE GRÁTIS</span> nas compras acima de R$ 249 • 10% OFF na
+      primeira compra com o cupom <strong>JOGA10</strong>
+    </div>
+    <header class="site-header">
+      <div class="header-main container">
+        <button
+          class="icon-btn menu-toggle"
+          data-action="toggle-menu"
+          aria-label="Abrir menu"
+        >
+          <i data-lucide="menu"></i></button
+        ><a class="brand" href="#inicio"
+          ><span class="brand-mark"><i data-lucide="zap"></i></span
+          ><span>CASA DOS<br /><b>ESPORTES</b></span></a
+        >
+        <div class="search">
+          <i data-lucide="search"></i
+          ><input
+            id="searchInput"
+            type="search"
+            placeholder="Busque por produto, marca ou esporte..."
+            aria-label="Pesquisar produtos"
+          /><kbd>⌘ K</kbd>
+        </div>
+        <nav class="header-actions">
+          <a class="header-action" href="conta.html"
+            ><i data-lucide="user-round"></i
+            ><span>Olá, atleta<br /><b>Minha conta</b></span></a
+          ><button
+            class="icon-btn"
+            data-action="favorites"
+            aria-label="Favoritos"
+          >
+            <i data-lucide="heart"></i><em id="favoritesCount">0</em></button
+          ><button class="icon-btn" data-action="cart" aria-label="Carrinho">
+            <i data-lucide="shopping-bag"></i><em id="cartCount">0</em>
+          </button>
+        </nav>
+      </div>
+      <div class="nav-wrap">
+        <nav class="main-nav container">
+          <a href="#catalogo">Categorias</a
+          ><a href="#catalogo">Promoções <span class="hot">HOT</span></a
+          ><a href="#catalogo">Lançamentos</a><a href="#catalogo">Estilos</a
+          ><a href="#catalogo">Marcas</a><a href="#contato">Contato</a
+          ><button class="admin-link" data-action="admin">
+            <i data-lucide="shield-check"></i> Área do lojista
+          </button>
+        </nav>
+      </div>
+    </header>
+    <main id="app">
+      <section class="hero" id="inicio">
+        <div class="hero-image"></div>
+        <div class="container hero-content">
+          <p class="eyebrow">PERFORMANCE SEM DESCULPAS</p>
+          <h1>Tudo para o<br /><span>seu esporte.</span></h1>
+          <p class="hero-copy">
+            Do primeiro treino à sua melhor marca. Equipamentos e estilo para
+            acompanhar cada movimento.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-gold" href="contato.html"
+              >Fale conosco <i data-lucide="message-circle"></i
+            ></a>
+            <a class="button button-light" href="catalogo.html"
+              >Ver produtos <i data-lucide="arrow-up-right"></i
+            ></a>
+          </div>
+          <div class="hero-stats">
+            <span><b>+2.000</b> produtos</span
+            ><span><b>24h</b> envio rápido</span
+            ><span><b>4.9/5</b> avaliação</span>
+          </div>
+        </div>
+      </section>
+      <section class="section categories container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">ENCONTRE SEU RITMO</p>
+            <h2>Explore por esporte</h2>
+          </div>
+          <a href="#catalogo" class="text-link"
+            >Ver todas <i data-lucide="arrow-up-right"></i
+          ></a>
+        </div>
+        <div class="category-grid">
+          <button
+            class="category-card category-football"
+            data-category="Futebol"
+          >
+            <span>FUTEBOL</span><i data-lucide="arrow-up-right"></i></button
+          ><button
+            class="category-card category-running"
+            data-category="Corrida"
+          >
+            <span>CORRIDA</span><i data-lucide="arrow-up-right"></i></button
+          ><button
+            class="category-card category-fitness"
+            data-category="Fitness"
+          >
+            <span>FITNESS</span><i data-lucide="arrow-up-right"></i></button
+          ><button
+            class="category-card category-basket"
+            data-category="Basquete"
+          >
+            <span>BASQUETE</span><i data-lucide="arrow-up-right"></i>
+          </button>
+        </div>
+      </section>
+      <section class="section product-section tinted">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">SELEÇÃO DA SEMANA</p>
+              <h2>Ofertas em movimento</h2>
+            </div>
+            <a href="#catalogo" class="text-link"
+              >Ver ofertas <i data-lucide="arrow-up-right"></i
+            ></a>
+          </div>
+          <div class="product-grid" id="promoProducts"></div>
+        </div>
+      </section>
+      <section class="section product-section container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">ACABOU DE CHEGAR</p>
+            <h2>Novos na área</h2>
+          </div>
+          <a href="#catalogo" class="text-link"
+            >Ver lançamentos <i data-lucide="arrow-up-right"></i
+          ></a>
+        </div>
+        <div class="product-grid" id="newProducts"></div>
+      </section>
+      <section class="section editorial">
+        <div class="container editorial-inner">
+          <div>
+            <p class="eyebrow">A CASA DO SEU JOGO</p>
+            <h2>Feito para quem<br /><em>não para.</em></h2>
+            <p>
+              Curadoria de marcas que entendem que cada detalhe importa. Vista
+              sua evolução.
+            </p>
+            <a href="#catalogo" class="button button-light"
+              >Conheça a coleção <i data-lucide="arrow-up-right"></i
+            ></a>
+          </div>
+          <div class="editorial-badge">MOVE<br /><b>FORWARD</b></div>
+        </div>
+      </section>
+      <section class="section product-section container" id="catalogo">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">A ESCOLHA DA GALERA</p>
+            <h2>Mais vendidos</h2>
+          </div>
+          <a href="#catalogo" class="text-link"
+            >Explorar catálogo <i data-lucide="arrow-up-right"></i
+          ></a>
+        </div>
+        <div class="product-grid" id="bestProducts"></div>
+        <div class="catalog-tools">
+          <strong>Catálogo completo</strong
+          ><select id="categoryFilter">
+            <option value="">Todas as categorias</option>
+            <option>Futebol</option>
+            <option>Corrida</option>
+            <option>Fitness</option>
+            <option>Basquete</option></select
+          ><select id="sortFilter">
+            <option value="recent">Mais recentes</option>
+            <option value="low">Menor preço</option>
+            <option value="high">Maior preço</option>
+            <option value="sales">Mais vendidos</option>
+            <option value="discount">Maior desconto</option></select
+          ><label><input type="checkbox" id="promoFilter" /> Em promoção</label
+          ><label><input type="checkbox" id="stockFilter" /> Disponíveis</label
+          ><label><input type="checkbox" id="newFilter" /> Lançamentos</label>
+        </div>
+        <div class="product-grid" id="catalogProducts"></div>
+      </section>
+    </main>
+    <footer id="contato">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="#inicio"
+            ><span class="brand-mark"><i data-lucide="zap"></i></span
+            ><span>CASA DOS<br /><b>ESPORTES</b></span></a
+          >
+          <p>Seu movimento. Nossa missão.<br />Equipamento para ir além.</p>
+          <div class="socials">
+            <a href="#contato"><i data-lucide="instagram"></i></a
+            ><a href="#contato"><i data-lucide="facebook"></i></a
+            ><a href="#contato"><i data-lucide="youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3>Comprar</h3>
+          <a href="#catalogo">Todos os produtos</a
+          ><a href="#catalogo">Promoções</a><a href="#catalogo">Lançamentos</a
+          ><a href="#catalogo">Marcas</a>
+        </div>
+        <div>
+          <h3>Ajuda</h3>
+          <a class="footer-contact-link" href="#contato"
+            ><strong>Fale conosco</strong></a
+          ><p>Entrega e devolução</p
+          ><p>Trocas e garantia</p
+          ><p>Rastrear pedido</p>
+        </div>
+        <div>
+          <h3>Atendimento</h3>
+          <p>Seg a Sex, 8h às 18h, Sáb 8h às 12h</p>
+          <p><strong>(49) 3555-5263</strong></p>
+          <p>contatocasadosesportes@gmail.com</p>
+          <div class="payment-icons">
+            <span>PIX</span><span>VISA</span><span>•••</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom container">
+        <span>© 2024 Casa dos Esportes. Todos os direitos reservados.</span
+        ><span>Privacidade&nbsp;&nbsp; Termos de uso</span
+        ><span class="supabase-note"
+          ><i data-lucide="database"></i> Pronto para Supabase</span
+        >
+      </div>
+    </footer>
+    <aside class="drawer" id="cartDrawer">
+      <div class="drawer-head">
+        <h2>Seu carrinho <span id="drawerCount">0 itens</span></h2>
+        <button class="icon-btn" data-action="close-cart" aria-label="Fechar">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div class="drawer-body" id="cartItems"></div>
+      <div class="cart-summary">
+        <div>
+          <span>Subtotal</span><strong id="cartSubtotal">R$ 0,00</strong>
+        </div>
+        <div>
+          <span>Descontos</span
+          ><strong class="discount" id="cartDiscount">- R$ 0,00</strong>
+        </div>
+        <div class="total">
+          <span>Total</span><strong id="cartTotal">R$ 0,00</strong>
+        </div>
+        <button class="button button-gold full" data-action="checkout">
+          Finalizar pedido <i data-lucide="arrow-right"></i></button
+        ><a href="#catalogo" data-action="close-cart">Continuar comprando</a>
+      </div>
+    </aside>
+    <div class="overlay" id="overlay"></div>
+    <div class="modal" id="productModal">
+      <button class="icon-btn modal-close" data-action="close-modal">
+        <i data-lucide="x"></i>
+      </button>
+      <div id="productDetail"></div>
+    </div>
+    <div class="modal small-modal" id="accountModal">
+      <button class="icon-btn modal-close" data-action="close-modal">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="account-icon"><i data-lucide="user-round"></i></div>
+      <p class="eyebrow">ÁREA DO ATLETA</p>
+      <h2>Entre para acompanhar sua jornada.</h2>
+      <form id="accountForm">
+        <input required type="email" placeholder="Seu melhor e-mail" /><input
+          required
+          type="password"
+          placeholder="Sua senha"
+        /><button class="button button-gold full">
+          Entrar na conta <i data-lucide="arrow-right"></i>
+        </button>
+      </form>
+      <a href="#contato" class="text-link">Esqueci minha senha</a>
+      <p class="account-foot">Ainda não tem conta? <b>Cadastre-se</b></p>
+    </div>
+    <div class="toast" id="toast">
+      <i data-lucide="check-circle-2"></i><span></span>
+    </div>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

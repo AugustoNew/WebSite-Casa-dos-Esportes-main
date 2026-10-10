@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Minha conta | Casa dos Esportes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/account.css" />
+  </head>
+  <body>
+    <div class="announcement">
+      <span>CASA DOS ESPORTES</span> • sua evolução começa aqui
+    </div>
+    <header class="account-header container">
+      <a class="brand" href="index.html"
+        ><span class="brand-mark"><i data-lucide="zap"></i></span
+        ><span>CASA DOS<br /><b>ESPORTES</b></span></a
+      ><a class="back-link" href="index.html"
+        ><i data-lucide="arrow-left"></i> Voltar para a loja</a
+      >
+    </header>
+    <main class="account-page">
+      <section class="account-intro">
+        <p class="eyebrow">ÁREA DO ATLETA</p>
+        <h1>Sua jornada.<br /><span>Seu espaço.</span></h1>
+        <p>
+          Salve seus dados, acompanhe pedidos e tenha seus favoritos sempre por
+          perto.
+        </p>
+        <div class="intro-points">
+          <span><i data-lucide="package-check"></i> Acompanhe seus pedidos</span
+          ><span><i data-lucide="heart"></i> Guarde seus favoritos</span
+          ><span><i data-lucide="shield-check"></i> Seus dados protegidos</span>
+        </div>
+      </section>
+      <section class="account-panel">
+        <div class="tabs">
+          <button class="tab active" data-tab="login">Entrar</button
+          ><button class="tab" data-tab="signup">Criar conta</button>
+        </div>
+        <div class="form-message" id="formMessage" role="status"></div>
+        <form id="loginForm" class="account-form">
+          <label
+            >E-mail<input
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+              placeholder="voce@email.com" /></label
+          ><label
+            >Senha<input
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              required
+              placeholder="Sua senha" /></label
+          ><button class="button button-gold full" type="submit">
+            Entrar na conta <i data-lucide="arrow-right"></i></button
+          ><button class="forgot" type="button" id="forgotButton">
+            Esqueci minha senha
+          </button>
+        </form>
+        <form id="signupForm" class="account-form hidden">
+          <label
+            >Nome completo<input
+              name="name"
+              type="text"
+              autocomplete="name"
+              required
+              placeholder="Como podemos chamar você?" /></label
+          ><label
+            >E-mail<input
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+              placeholder="voce@email.com" /></label
+          ><label
+            >Telefone <small>(opcional)</small
+            ><input
+              name="phone"
+              type="tel"
+              autocomplete="tel"
+              placeholder="(11) 99999-9999" /></label
+          ><label
+            >Senha<input
+              name="password"
+              type="password"
+              autocomplete="new-password"
+              minlength="6"
+              required
+              placeholder="Mínimo de 6 caracteres" /></label
+          ><label class="check"
+            ><input name="terms" type="checkbox" required /> Aceito os termos de
+            uso e a política de privacidade.</label
+          ><button class="button button-gold full" type="submit">
+            Criar minha conta <i data-lucide="arrow-right"></i>
+          </button>
+        </form>
+        <div class="database-status">
+          <i data-lucide="database"></i
+          ><span id="databaseStatus">Cadastro local ativo</span>
+        </div>
+      </section>
+    </main>
+    <footer class="account-footer">
+      <span>© 2024 Casa dos Esportes</span
+      ><span>Compra segura • Privacidade</span>
+    </footer>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="js/supabase-config.js"></script>
+    <script src="js/account.js"></script>
+  </body>
+</html>
